@@ -44,8 +44,6 @@ securityContext:
   privileged: false
   {{- end }}
   readOnlyRootFilesystem: true
-  runAsNonRoot: false
-  runAsUser: 0
 terminationMessagePolicy: FallbackToLogsOnError
 {{- if or (not .Values.cniEnabled) .Values.proxyInit.saMountPath }}
 volumeMounts:
